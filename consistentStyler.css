@@ -1,4 +1,56 @@
 header {
+    width: 100%;
+    height: 75px;
     background-color: rgb(1, 54, 54);
     color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
 }
+
+.h1-h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex: auto;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-size: clamp(2vw, 2vw, 2rem);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+li {
+    display: flex;
+    justify-content: end;      
+    list-style: none;
+    margin: 0.2rem;
+    padding: 0 0.9rem 0 0;
+    font-size: max(1vw, 1.2em);
+}
+
+#descriptor-block {
+    padding-top: 75px;
+} 
