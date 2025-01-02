@@ -62,3 +62,13 @@ li {
 #descriptor-block {
     padding-top: 75px;
 } 
+
+#results {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    font-weight: bold;
+}

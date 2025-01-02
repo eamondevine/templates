@@ -8,6 +8,7 @@
 		
 		<link rel="stylesheet" href="consistentStyler.css">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
+       
 	</head>
     <body>
         <header>
@@ -39,7 +40,66 @@
             <h2 id="page_three">THREE: Shapes with Letters</h2>
             <p>Enter an input and it randomly generates different shape structures using that letter or symbol.</p>
         </div> 
-    </div>       
+    </div>
+
+    <div>
+        <h1>The Code below is NOT an example of my greatness...</h1>
+        <br>
+        <p1>it is some code that I got from ChatGPT so that I can learn about making input fields and 
+            retrieving inputs and viewing the results.
+        </p1>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- Input field to add strings to array -->
+    <input type="text" id="input-field" placeholder="Enter a string">
+    <button onclick="addToArray()">Add to Array</button>
+
+    <!-- Search bar to search in the array -->
+    <input type="text" id="search-input" placeholder="Search for a keyword" oninput="searchKeyword()">
+
+    <!-- Display matched results -->
+    <div id="results"></div>
+       
     </main>
+    <script>
+        // Initialize an empty array
+        let stringArray = [];
+
+        // Function to add input string to the array
+        function addToArray() {
+            const inputField = document.getElementById('input-field');
+            const userInput = inputField.value.trim(); // Get the user input and trim spaces
+
+            // Check if the input is not empty
+            if (userInput) {
+                // Add the input to the array
+                stringArray.push(userInput);
+
+                // Clear the input field
+                inputField.value = '';
+            } else {
+                alert("Please enter a valid string.");
+            }
+        }
+
+        // Function to search for a keyword in the array
+        function searchKeyword() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase(); // Get the search term and convert to lowercase
+            const resultsDiv = document.getElementById('results'); // The div to display the results
+
+            // Filter the array based on the search term
+            const results = stringArray.filter(item => item.toLowerCase().includes(searchTerm));
+
+            // Display the results
+            if (results.length > 0) {
+                resultsDiv.innerHTML = results.join('<br>');
+            } else {
+                resultsDiv.innerHTML = 'No results found';
+            }
+        }
+    </script>
+
     </body>
 </html>
