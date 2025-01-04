@@ -72,3 +72,8 @@ li {
     font-size: 18px;
     font-weight: bold;
 }
+
+main div:nth-of-type(2) h1 {
+    font-size: larger;
+    font-style: italic;
+}
